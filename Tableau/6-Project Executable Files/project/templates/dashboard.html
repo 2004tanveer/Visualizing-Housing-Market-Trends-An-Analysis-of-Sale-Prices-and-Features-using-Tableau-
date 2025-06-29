@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="dashboard-section container">
+    <h2>Comprehensive House Data Analysis</h2>
+    
+    <div class="dashboard-images-grid">
+        <div class="dashboard-image-item">
+            <img src="{{ url_for('static', filename='img/D1.png') }}" alt="Dashboard Overview">
+            <p>Overall Market Trends</p>
+        </div>
+        <div class="dashboard-image-item">
+            <img src="{{ url_for('static', filename='img/D2.png') }}" alt="Sales Analysis Dashboard">
+            <p>Sales Performance by Region</p>
+        </div>
+        <div class="dashboard-image-item">
+            <img src="{{ url_for('static', filename='img/D3.png') }}" alt="Demographics Dashboard">
+            <p>Buyer Demographics & House Age</p>
+        </div>
+    </div>
+    
+    </section>
+{% endblock %}

@@ -1,0 +1,270 @@
+/* static/css/style.css */
+
+/* Basic Reset & Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8; /* Light background for content area */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px; /* Max width for content, similar to your screenshots */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #3f51b5; /* Dark blue, similar to screenshot */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 30px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a.active,
+.navbar nav ul li a:hover {
+    color: #ff9800; /* Orange highlight for active/hover */
+}
+
+.navbar nav ul li a.active::after,
+.navbar nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff9800; /* Orange underline */
+}
+
+
+/* Hero Section (Home Page) */
+.hero-section {
+    background-image: url('../img/background_hero.png'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px; /* Adjust padding to control height */
+    position: relative;
+    z-index: 1; /* Ensure text is above overlay */
+}
+
+.hero-section::before { /* Overlay to make text readable */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.2;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff5722; /* Orange button, similar to screenshot */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between image and text */
+    padding: 60px 20px;
+    background-color: white; /* White background for content block */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* Space from top */
+}
+
+.about-image {
+    flex: 1; /* Takes up one part of the space */
+    min-width: 400px; /* Minimum width for the image */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1.5; /* Takes up 1.5 parts of the space, more for text */
+}
+.simple-story-image {
+    width: 80%; /* This controls the container's width. Adjust as needed. */
+    max-width: 900px; /* Max width to prevent it from getting too big on very large screens */
+    margin: 30px auto; /* Centers the div horizontally and adds vertical spacing */
+    text-align: center; /* Centers the image and any caption/text inside this div */
+}
+
+.simple-story-image img {
+    max-width: 100%; /* Ensures the image never overflows its parent .simple-story-image div */
+    height: auto; /* Maintains the image's aspect ratio (prevents stretching) */
+    border-radius: 8px; /* Adds subtle rounded corners to the image */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Adds a nice, soft shadow to the image */
+    display: block; /* Removes any extra space that browsers sometimes add below images */
+    margin: 0 auto 10px auto; /* Centers the image itself within its container and adds space below */
+}
+
+.simple-story-image p { /* If you added a <p> tag as a caption below your image */
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    margin-top: 0;
+    color: #3f51b5; /* Blue heading */
+}
+
+.about-text ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about-text ul li {
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #555;
+    display: flex; /* For custom checkmark */
+    align-items: flex-start;
+}
+
+.about-text ul li::before {
+    content: '\2713'; /* Unicode for checkmark */
+    color: #ff5722; /* Orange checkmark */
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+/* Dashboard and Story Sections */
+.dashboard-section, .story-section {
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    text-align: center; /* Center the heading and potentially embed */
+}
+
+.dashboard-section h2, .story-section h2 {
+    font-size: 32px;
+    color: #3f51b5;
+    margin-bottom: 30px;
+}
+
+.tableau-embed-container {
+    width: 100%;
+    /* You might need to adjust the height of the iframe in dashboard.html/story.html directly */
+    /* If you're using static images, remove/adjust these styles */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .navbar nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .about-section {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .about-image {
+        min-width: unset; /* Remove min-width on smaller screens */
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="about-section container">
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='img/building.png') }}" alt="Modern Building">
+    </div>
+    <div class="about-text">
+        <h3>Visualizing Housing Market Trends: An Analysis of Sale Prices and Features using Tableau</h3>
+        <ul>
+            <li>&#10003; This project seeks to address challenges in understanding factors influencing house prices and sales trends, focusing on comprehensive housing data analysis.</li>
+            <li>&#10003; By exploring metrics such as total sales by years since renovation, house age distribution by the number of bathrooms, bedrooms, and floors, and the impact of renovations on house age, key market trends and insights are uncovered.</li>
+            <li>&#10003; Utilizing Tableau, the project visualizes housing data patterns to inform strategic decisions, optimize pricing strategies, and enhance market competitiveness.</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
